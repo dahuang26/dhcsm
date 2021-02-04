@@ -1,3 +1,4 @@
 flask
 scipy
 geneticalgorithm
+pandas
