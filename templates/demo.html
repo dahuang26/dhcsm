@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<title>PBSD+GA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../static/style_demo.css" />
+<link rel="stylesheet" href="../static/style_demo2.css" />
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align">
+     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"></a>
+     <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
+     <a href="#App" class="w3-bar-item w3-button w3-hide-small w3-hover-white">App</a>
+     <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Team</a>
+     <a href="#Publication" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Publicaiton</a>
+     <a href="#Contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+     </div>
+     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+    </div>
+    <br>
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#App" class="w3-bar-item w3-button">App</a>
+    <a href="#team" class="w3-bar-item w3-button">Team</a>
+    <a href="#Publication" class="w3-bar-item w3-button">Publication</a>
+    <a href="#Contact" class="w3-bar-item w3-button">Contact</a>
+    <a href="#" class="w3-bar-item w3-button">Search</a>
+  </div>
+</div>    
+<!-- First Grid: Logo & About -->
+<div class="w3-row">
+<div class="w3-half w3-container">
+  <h1 class="w3-xxlarge w3-text-light-grey">Hello</h1>
+  <h1 class="w3-xxlarge w3-text-grey">We are</h1>
+  <h1 class="w3-jumbo">Auto rocking wall design Web</h1>
+</div>
+<div class="w3-half w3-container w3-xlarge w3-text-grey">
+  <p class="">Optimizing displacement-based seismic design of mass timber rocking walls using genetic algorithm</p>
+  <p>intelligent auto design tool for mass timber rocking wall systems</p>
+  <img src="../static/Tallwood.png" style="width:100%">
+</div>
+</div>
+
+<!-- Second Grid: Resent -->
+<div class="w3-panel w3-text-grey">
+<h4>Colorado School of Mines</h4>
+</div>
+<div class="w3-row">
+<div class="w3-half w3-container">
+  <img src="../static/logo.png" style="width:100%;height:100%">
+</div>
+<div class="w3-half w3-container">
+  <img src="../static/masstimber.jpg" style="width:100%">
+  <p class="w3-xlarge w3-text-grey">
+  Displacement-based design; Genetic algorith optimization; Mass timber rocking wall; Nonlinear time-history analysis</p>
+</div>
+</div>
+
+<!-- App Container -->
+
+<!-- Work Row -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+
+        <div class="w3-quarter">
+        <h2>Our Work</h2>
+        <p>This website application provides a auto design tool for mass timber rocking wall system, this procedure will optimize desin for mass timber rocking wall systems utilizing a genetic algorith (GA) beyond typical displacement-based design metrics for wood buildings. Users only need to input a few parameters of the building and design targets they want to design, and the application will automatically generate optimized design result.</p>
+        </div>
+        
+        <div class="w3-quarter">
+        <div class="w3-card w3-white">
+          <img src="../static/Fig. 2 Optimization process.png" alt="Snow" style="width:100%">
+          <div class="w3-container">
+          <h3>Design procedure</h3>
+          </div>
+          </div>
+        </div>
+        
+        <div class="w3-quarter">
+        <div class="w3-card w3-white">
+          <img src="../static/logo.png" alt="Lights" style="width:100%">
+          <div class="w3-container">
+          <h3>parameters needed</h3>
+          </div>
+          </div>
+        </div>
+        
+        <div class="w3-quarter">
+        <div class="w3-card w3-white">
+          <img src="../static/logo.png" alt="Mountains" style="width:100%">
+          <div class="w3-container">
+          <h3>Design outcome</h3>
+          </div>
+          </div>
+        </div>
+        
+        </div>
+
+<div class="w3-container w3-padding-64 w3-center" id="App">
+<body>
+<div class="container">
+    <form action="/submit" method="POST">
+    <div class="form-group">
+        <h1>Building parameters</h1>
+        <h4>Input story number here</h4>
+        <input
+        type="text"
+        name="story number"
+        placeholder="number"
+        />
+        <h4>Input story weight here</h4>
+        <input
+        type="text"
+        name="story weight"
+        placeholder="kips"
+    />
+    <h4>Input design targets here</h4>
+    <input
+        type="text"
+        name="Design Targets"
+        placeholder="drift limit; cost; acceleration"
+    />
+    </div>
+    <div class="form-group">
+        <h1>Ground motion suite</h1>
+        <select name="dealer">
+        <option value="">Select GM</option>
+        <option value="SLE">SLE</option>
+        <option value="DBE">DBE</option>
+        <option value="MCE">MCE</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <h1>How many earthquakes you would like to run</h1>
+        <input type="radio" name="rating" value="1" /> 1
+        <input type="radio" name="rating" value="2" /> 2
+        <input type="radio" name="rating" value="3" /> 3
+        <input type="radio" name="rating" value="4" /> 4
+        <input type="radio" name="rating" value="5" /> 5
+        <input type="radio" name="rating" value="6" /> 6
+        <input type="radio" name="rating" value="7" /> 7
+        <input type="radio" name="rating" value="8" /> 8
+        <input type="radio" name="rating" value="9" /> 9
+        <input type="radio" name="rating" value="10" checked /> 10
+    </div>
+    <div class="form-group">
+        <h1>Comments</h1>
+        <textarea
+        name="comments"
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="Please comment here"
+        ></textarea>
+    </div>
+    <input type="submit" value="Submit" class="btn" />
+    </form>
+</div>
+
+
+</div>
+</div>
+        
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center" id="team">
+        <h2>OUR TEAM</h2>
+        <p>Meet the teams:</p>
+        
+        <div class="w3-row"><br>
+        
+        <div class="w3-quarter">
+          <img src="../static/logo.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+          <h3>DH</h3>
+          <p>Web Designer</p>
+        </div>
+        
+        <div class="w3-quarter">
+          <img src="../static/logo.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+          <h3>DH</h3>
+          <p>Support</p>
+        </div>
+        
+        <div class="w3-quarter">
+          <img src="../static/logo.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+          <h3>DH</h3>
+          <p>Boss man</p>
+        </div>
+        
+        <div class="w3-quarter">
+          <img src="../static/logo.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+          <h3>DH</h3>
+          <p>Fixer</p>
+        </div>
+        
+        </div>
+        </div>
+        
+<!-- Publication Container -->
+<div class="w3-container w3-padding-64 w3-center" id="Publication">
+        <h2>Publication</h2>
+        <p>1. Optimizing displacement-based seismic design of mass timber rocking walls using genetic algorithm:</p>
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0141029620342048" target="_blank">Visit publication website!</a> 
+        </div>
+        </div>
+        
+<!-- Footer -->
+<div class="w3-container w3-padding-64 w3-center" id="Contact"></div>
+<div class="w3-row w3-section">
+  <div class="w3-third w3-container w3-black w3-large" style="height:250px">
+    <h2>Contact Info</h2>
+    <p> Da Huang</p>
+    <p> Email: huang@mymail.mines.edu</p>
+  </div>
+  <div class="w3-third w3-center w3-large w3-dark-grey w3-text-white" style="height:250px">
+    <h2>Project info</h2>
+    <p>If you have an idea.</p>
+    <p>What are you waiting for?</p>
+    <a href="http://nheritallwood.mines.edu/" target="_blank">Visit project website!</a> 
+  </div>
+  <div class="w3-third w3-center w3-large w3-grey w3-text-white" style="height:250px">
+    <h2>Like Us</h2>
+    <i class="w3-xlarge fa fa-facebook-official"></i><br>
+    <i class="w3-xlarge fa fa-pinterest-p"></i><br>
+    <i class="w3-xlarge fa fa-twitter"></i><br>
+    <i class="w3-xlarge fa fa-flickr"></i><br>
+    <i class="w3-xlarge fa fa-linkedin"></i>
+  </div>
+</div>
+
+
+
+      
+</body>
+</html>
